@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
 import ActionableButton from "../../Shared/ActionableButton";
-import { DiceContext } from "../../../Context/diceContext";
+import { DiceContext } from "../../../Context/DiceContext";
 const ButtonArea = () => {
   const { dispatchExperimental } = useContext(DiceContext);
-  console.log(dispatchExperimental);
+
   return (
     <View style={styles.container}>
       <ActionableButton

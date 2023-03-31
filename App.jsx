@@ -5,18 +5,20 @@ import ButtonArea from "./src/Components/Selectors/Actions/ButtonArea";
 import { dieSideReducer } from "./src/Reducers/dieSideReducer";
 import { experimentalReducer } from "./src/Reducers/experimentalReducer";
 import { returnRandomNum } from "./src/Helpers/returnRandomNum";
-import { DiceContext } from "./src/Context/diceContext";
+import { DiceContext } from "./src/Context/DiceContext";
 import { useReducer, useEffect } from "react";
 
 export default function App() {
-  useEffect(() => {
-    console.log("re-render");
-  });
-  const initialExperimentalState = { dies: [0, 0, 0] };
+  const initialExperimentalState = [
+    { value: 0, id: "first" },
+    { value: 0, id: "second" },
+    { value: 0, id: "third" },
+  ];
   const [stateExperimental, dispatchExperimental] = useReducer(
     experimentalReducer,
     initialExperimentalState
   );
+  // console.log(stateExperimental);
   const [state, dispatch] = useReducer(dieSideReducer, {
     dieValue: 0,
     totalScore: 0,

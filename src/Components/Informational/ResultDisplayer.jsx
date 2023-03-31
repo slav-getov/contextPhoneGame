@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { DiceContext } from "../../Context/diceContext";
+import { DiceContext } from "../../Context/DiceContext";
 const ResultDisplayer = ({ valueToDisplay }) => {
   const { stateExperimental } = useContext(DiceContext);
-  console.log(stateExperimental);
+
   return (
     <View style={styles.displayContainer}>
       <Text style={styles.displayerText}>{"hey"}</Text>
