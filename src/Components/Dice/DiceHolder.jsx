@@ -6,20 +6,26 @@ const DiceHolder = () => {
   return (
     <View style={styles.container}>
       <ResultDisplayer valueToDisplay="Total: 9" />
+      <View style={styles.diceContainer}>
+        <DiceElement numberOnDiceSide={2} />
+        <DiceElement numberOnDiceSide={2} />
+        <DiceElement numberOnDiceSide={2} />
+      </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "column",
 
-    flexDirection: "row",
-    alignItems: "flex-end",
-    justifyContent: "center",
+    justifyContent: "flex-end",
+    alignItems: "center",
     marginBottom: 10,
   },
-  displayerStyle: {
-    color: "white",
+
+  diceContainer: {
+    flexDirection: "row",
   },
 });
 export default DiceHolder;

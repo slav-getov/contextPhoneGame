@@ -10,14 +10,13 @@ const DiceElement = ({ numberOnDiceSide }) => {
 };
 const styles = StyleSheet.create({
   dice: {
-    padding: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     fontSize: 20,
     backgroundColor: "green",
     color: "white",
-    width: "50%",
-    textAlign: "center",
+    marginHorizontal: 10,
     borderRadius: 15,
-    marginVertical: 50,
   },
 });
 

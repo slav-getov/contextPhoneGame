@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
 import ActionableButton from "../../Shared/ActionableButton";
+import { DiceContext } from "../../../Context/diceContext";
 const ButtonArea = () => {
+  const { dispatchExperimental } = useContext(DiceContext);
+  console.log(dispatchExperimental);
   return (
     <View style={styles.container}>
-      <ActionableButton title="Roll Dice" style={styles.button} />
+      <ActionableButton
+        title="Roll Dice"
+        style={styles.button}
+        onClick={() => console.log("you clicked!")}
+      />
     </View>
   );
 };
